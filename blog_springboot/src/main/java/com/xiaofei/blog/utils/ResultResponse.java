@@ -2,8 +2,11 @@ package com.xiaofei.blog.utils;
 
 import lombok.Data;
 
+/**
+ * api接口返回封装
+ */
 @Data
-public class ApiResponse {
+public class ResultResponse {
     private Integer code; // 状态码
     private String message; // 返回描述
     private Object data; // 返回数据
@@ -11,7 +14,7 @@ public class ApiResponse {
     /**
      * 无参构造函数
      */
-    public ApiResponse() {
+    public ResultResponse() {
     }
 
     /**
@@ -21,7 +24,7 @@ public class ApiResponse {
      * @param message
      * @param data
      */
-    public ApiResponse(int code, String message, Object data) {
+    public ResultResponse(int code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;

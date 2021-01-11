@@ -1,5 +1,9 @@
 package com.xiaofei.blog.service;
 
-public interface UserService {
+import com.xiaofei.blog.domain.User;
 
+public interface UserService {
+    User add(User user);
+
+    User findByUsername(String username);
 }
