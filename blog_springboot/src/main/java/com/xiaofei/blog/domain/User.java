@@ -2,17 +2,19 @@ package com.xiaofei.blog.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+/**
+ * @author xiaofei
+ */
 @Data
+@Entity
+@Table(name = "user")
 public class User {
     @Id
-    @GeneratedValue
-    private Long id;
+    @Column(name = "id")
+    int id;
 
-    private String username;
-    private String password;
+    String username;
+    String password;
 }
